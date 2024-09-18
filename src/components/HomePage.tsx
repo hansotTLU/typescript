@@ -1,24 +1,29 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid2";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
+import * as React from "react"
+import { styled } from "@mui/material/styles"
+import Box from "@mui/material/Box"
+import Paper from "@mui/material/Paper"
+import Grid from "@mui/material/Grid2"
+import ImageList from "@mui/material/ImageList"
+import ImageListItem from "@mui/material/ImageListItem"
+import ImageListItemBar from "@mui/material/ImageListItemBar"
 
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid size={4}>
-          
-        </Grid>
+      <Grid
+        container
+        spacing={2}
+      >
+        <Grid size={4}></Grid>
 
         <Grid size={6}>
-        <h1>Doggo</h1>
-          <ImageList variant="masonry" cols={3} gap={8}>
-            {dogPics.map((item) => (
+          <h1>Doggo</h1>
+          <ImageList
+            variant="masonry"
+            cols={3}
+            gap={8}
+          >
+            {dogPics.map(item => (
               <ImageListItem key={item.img}>
                 <img
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -26,15 +31,22 @@ export default function HomePage() {
                   alt={item.title}
                   loading="lazy"
                 />
-                <ImageListItemBar position="below" title={item.title} />
+                <ImageListItemBar
+                  position="below"
+                  title={item.title}
+                />
               </ImageListItem>
             ))}
           </ImageList>
         </Grid>
         <Grid size={7}>
-        <h1>Car</h1>
-          <ImageList variant="masonry" cols={3} gap={8}>
-            {carPics.map((item) => (
+          <h1>Car</h1>
+          <ImageList
+            variant="masonry"
+            cols={3}
+            gap={8}
+          >
+            {carPics.map(item => (
               <ImageListItem key={item.img}>
                 <img
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -42,14 +54,17 @@ export default function HomePage() {
                   alt={item.title}
                   loading="lazy"
                 />
-                <ImageListItemBar position="below" title={item.title} />
+                <ImageListItemBar
+                  position="below"
+                  title={item.title}
+                />
               </ImageListItem>
             ))}
           </ImageList>
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }
 
 const carPics = [
@@ -61,7 +76,7 @@ const carPics = [
     img: "https://imgur.com/08c16Ss.jpg",
     title: "Taillight Tuesday",
   },
-];
+]
 
 const dogPics = [
   {
@@ -72,4 +87,4 @@ const dogPics = [
     img: "https://imgur.com/vTdryQk.jpg",
     title: "Ball",
   },
-];
+]

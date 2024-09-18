@@ -1,7 +1,7 @@
-import "./App.css";
-import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import { Box } from "@mui/material";
+import "./App.css"
+import { Outlet } from "react-router-dom"
+import Header from "./components/Header"
+import { Box } from "@mui/material"
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Outlet />
       </Box>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

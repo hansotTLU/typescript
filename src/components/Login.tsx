@@ -1,25 +1,25 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import { FormEvent, useState, useEffect } from "react";
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
+import TextField from "@mui/material/TextField"
+import Typography from "@mui/material/Typography"
+import { FormEvent, useState, useEffect } from "react"
 
 export default function Login() {
-  const [form, setForm] = useState({ username: "", password: "" });
+  const [form, setForm] = useState({ username: "", password: "" })
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    console.log(form);
+    console.log(form)
 
     // console.log({
     //   username,
     //   password,
     // });
-  };
+  }
 
   // useEffect(() => {
   //   console.log("Renders every time");
@@ -39,11 +39,11 @@ export default function Login() {
     //   }
     // })
 
-    setForm((prevForm) => ({
+    setForm(prevForm => ({
       ...prevForm,
       [event.target.name]: event.target.value,
-    }));
-  };
+    }))
+  }
 
   return (
     <Box
@@ -76,11 +76,14 @@ export default function Login() {
             // onChange={(event) => setPassword(event.target.value)}
             onChange={handleChange}
           />
-          <Button variant="contained" type="submit">
+          <Button
+            variant="contained"
+            type="submit"
+          >
             Login
           </Button>
         </Stack>
       </form>
     </Box>
-  );
+  )
 }
